@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(./Gilroy-Bold.ttf);
+}
+@font-face {
+  font-family: Gilroy-Medium;
+  src: url(./Gilroy-Medium.ttf);
+}
+@font-face {
+  font-family: Gilroy-SemiBold;
+  src: url(./Gilroy-SemiBold.ttf);
+}
+h1 {
+  display: flex;
+  color: rgb(247, 130, 149);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: Gilroy-Bold;
+  font-size: 38px;
+  line-height: 96px;
+  padding-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 3.1px;
+}
+span {
+  color: black;
+}
+
+body {
+  font-size: 0.9rem;
+  font-family: Gilroy-Medium;
+  color: #f5f1e3;
+  background-color: pink;
+  letter-spacing: 0.02rem;
+  min-height: 100vh;
+}
+
+p {
+  padding: 5px 0;
+}
+
+section {
+  padding: 20px 0;
+}
+
+#repo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: rgb(247, 130, 149);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.repo-name {
+  color: rgb(247, 130, 149);
+  font-size: 2rem;
+  word-break: break-word;
+}
+
+#repodetail {
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+#repo-name {
+  color: rgb(247, 130, 149);
+}
+
+#repodetail p {
+  padding: 15px 0;
+  word-break: break-all;
+}
+
+#view-more {
+  text-align: center;
+  font-size: 1rem;
+  margin: 10px 0 10px;
+  color: black;
+  cursor: pointer;
+}
+
+#view-more:hover {
+  text-decoration: underline;
+}
+
+#repo-card,
+#repodetail-card {
+  border: 2px solid rgb(247, 130, 149);
+  width: 300px;
+  height: 200px;
+  padding: 13px;
+  border-radius: 10px;
+  background-color: black;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 16px 15px 20px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#repodetail-card {
+  padding-top: 30px;
+  width: 500px;
+  height: 400px;
+}
+img {
+  width: 50px;
+}
+#errorinstance {
+  margin-left: 10px;
+  font-weight: 1000;
+  font-size: 150%;
+}
+#e-homepage {
+  position: absolute;
+  left: 40px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    display: block;
+    flex-direction: row;
+    color: rgb(247, 130, 149);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1px;
+    width: 350px;
+    font-family: Gilroy-Bold;
+    font-size: 25px;
+    line-height: 36px;
+    border-bottom-style: solid;
+    border-bottom-width: 0.1px;
+    margin: 0 auto;
+  }
+  #repo-card {
+    margin: 0 auto;
+    width: 250px;
+  }
+  img {
+    width: 35px;
+    height: 23px;
+    padding-left: 4px;
+  }
+
+  #errorinstance {
+    font-weight: 100;
+    font-size: 70%;
+  }
+  #e-homepage {
+    position: absolute;
+    left: 10px;
+  }
+  #repodetail-card {
+    width: 280px;
+    height: 310px;
+    margin: 0 auto;
+  }
+  #repodetail p {
+    padding: 10px 0;
+    word-break: break-all;
+  }
+}

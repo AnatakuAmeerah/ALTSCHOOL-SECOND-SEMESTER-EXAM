@@ -48,7 +48,7 @@ function MyRepoList() {
           <h2 id="repo-name">{userDetail.name}</h2>
         </Link>
         <p id="language">
-          Langauge:{" "}
+          Language:{" "}
           {userDetail.language === null ? "none" : userDetail.language}
         </p>
         <p id="date">Start date & time: {userDetail.created_at}</p>

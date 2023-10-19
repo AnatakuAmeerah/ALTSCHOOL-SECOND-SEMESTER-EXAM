@@ -51,7 +51,7 @@ function RepoDetails() {
         </p>
         <br />
         <br />
-        <p><Link to="/"><b>Home Page</b></Link></p>
+        <p id="homeininfo"><Link to="/"><b>Home Page</b></Link></p>
       </div>
     </div>
   );

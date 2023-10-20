@@ -1,4 +1,4 @@
-
+import Error404Page from "./Error404Page";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -40,27 +40,35 @@ function MyRepoList() {
     setCurrentPage(currentPage + 1);
   };
 
-  const userDetails= user.map((userDetail) => {
+  const userDetails = user.map((userDetail) => {
     return (
       <section id="repo-list-box">
-      <div id="repo-card" key={userDetail.id}>
-        <Link to={`/repodetails/${userDetail.name}`}>
-          <h2 id="repo-name">{userDetail.name}</h2>
-        </Link>
-        <p id="language">
-          Language:{" "}
-          {userDetail.language === null ? "none" : userDetail.language}
-        </p>
-        <p id="date">Start date & time: {userDetail.created_at}</p>
-        <p id="visibility">Visibility: {userDetail.visibility}</p>
-      </div>
+        <div id="repo-card" key={userDetail.id}>
+          <Link to={`/repodetails/${userDetail.name}`}>
+            <h2 id="repo-name">{userDetail.name}</h2>
+          </Link>
+          <p id="language">
+            Language:{" "}
+            {userDetail.language === null ? "none" : userDetail.language}
+          </p>
+          <p id="date">Start date & time: {userDetail.created_at}</p>
+          <p id="visibility">Visibility: {userDetail.visibility}</p>
+        </div>
       </section>
     );
   });
 
   return (
     <>
-          <p id="errorinstance"><Link to="/errorboundary">ErrorBoundaryTest</Link>  </p>
+      <div id="errors">
+        <p id="errorinstance">
+          <Link to="/errorboundary">ErrorBoundaryTest</Link>{" "}
+        </p>
+        <p id="error-404-link">
+          <Link to="/error404">Error404 Page </Link>{" "}
+        </p>
+      </div>
+
       <section id="repo-container">{userDetails}</section>
       <p id="view-more" onClick={viewMore}>
         {showViewMore}

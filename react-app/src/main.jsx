@@ -21,7 +21,7 @@ const router = createBrowserRouter(
         path="/"
         element={
           // <ErrorBoundary>
-            <MyRepoList />
+          <MyRepoList />
           // </ErrorBoundary>
         }
         errorElement={<Error404Page />}
@@ -29,7 +29,8 @@ const router = createBrowserRouter(
       <Route path="/repodetails" element={<AppOutlet />}>
         <Route path=":id" element={<RepoDetails />} />
       </Route>
-      <Route path="/errorboundary" element={<ErrorBoundary/>}/>
+      <Route path="/errorboundary" element={<ErrorBoundary />} />
+      <Route path="/error404" element={<Error404Page />} />
     </>
   )
 );
@@ -37,7 +38,7 @@ const router = createBrowserRouter(
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <ErrorBoundary> */}
-      <App />
+    <App />
     {/* </ErrorBoundary> */}
     <RouterProvider router={router} />
   </React.StrictMode>

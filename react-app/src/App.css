@@ -129,8 +129,27 @@ img {
   left: 40px;
   font-weight: 600;
 }
-#homeininfo{
+#homeininfo {
   margin-top: 30px;
+}
+#sorry {
+  margin: 10% auto;
+  color: rgb(247, 130, 149);
+  align-items: center;
+  text-align: center;
+  font-size: 160%;
+}
+#errors {
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 20px;
+  text-decoration: underline;
+  color: rgb(247, 130, 149);
+}
+#error-404-link {
+  font-weight: 1000;
+  font-size: 150%;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -160,7 +179,8 @@ img {
     padding-left: 4px;
   }
 
-  #errorinstance {
+  #errorinstance,
+  #error-404-link {
     color: #000;
     font-weight: 300;
     font-size: 100%;

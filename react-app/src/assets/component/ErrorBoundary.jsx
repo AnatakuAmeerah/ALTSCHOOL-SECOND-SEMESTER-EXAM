@@ -1,27 +1,31 @@
-
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class ErrorBoundary extends Component {
- constructor(props) {
+  constructor(props) {
     super(props);
-    this.state = { hasError: true};
- }
+    this.state = { hasError: true };
+  }
 
- static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {
     return { hasError: true };
- }
+  }
 
- componentDidCatch(error, info) {
+  componentDidCatch(error, info) {
     console.log(error, info);
- }
+  }
 
- render() {
+  render() {
     if (this.state.hasError) {
-      return <h1>There was an error.</h1>;
+      return (
+        <div id="sorry">
+          <h2>Sorry! </h2>
+          <h2>There was an error loading this page.</h2>
+        </div>
+      );
     }
 
     return this.props.children;
- }
+  }
 }
 
 export default ErrorBoundary;

@@ -10,6 +10,8 @@ I followed the react roucter documentation and used the createBrowserRouter beca
 
 During the rendering of my RepoList component a key error is being thrown in the console but my useParams hook returns an object that contains the id of each child from the parent URL.
 
+I also created a page to test the errorboundary and 404pages.
+
 
 
 

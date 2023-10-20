@@ -13,7 +13,6 @@ import AppOutlet from "./assets/component/AppOutlet.jsx";
 import MyRepoList from "./assets/component/MyRepoList.jsx";
 import ErrorBoundary from "./assets/component/ErrorBoundary.jsx";
 import "./App.css";
-import ErrorInstance from "./assets/component/ErrorInstance.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,25 +20,25 @@ const router = createBrowserRouter(
       <Route
         path="/"
         element={
-          <ErrorBoundary>
+          // <ErrorBoundary>
             <MyRepoList />
-          </ErrorBoundary>
+          // </ErrorBoundary>
         }
         errorElement={<Error404Page />}
       />
       <Route path="/repodetails" element={<AppOutlet />}>
         <Route path=":id" element={<RepoDetails />} />
       </Route>
-      <Route path="/errorinstance" element={<ErrorInstance />} />
+      <Route path="/errorboundary" element={<ErrorBoundary/>}/>
     </>
   )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ErrorBoundary>
+    {/* <ErrorBoundary> */}
       <App />
-    </ErrorBoundary>
+    {/* </ErrorBoundary> */}
     <RouterProvider router={router} />
   </React.StrictMode>
 );

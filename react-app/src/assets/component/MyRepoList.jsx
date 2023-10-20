@@ -60,9 +60,7 @@ function MyRepoList() {
 
   return (
     <>
-     <p><Link id="errorinstance" to="/errorinstance">
-            ErrorBoundarytest
-          </Link> </p>
+          <p id="errorinstance"><Link to="/errorboundary">ErrorBoundaryTest</Link>  </p>
       <section id="repo-container">{userDetails}</section>
       <p id="view-more" onClick={viewMore}>
         {showViewMore}

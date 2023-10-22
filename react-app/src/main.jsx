@@ -30,7 +30,6 @@ const router = createBrowserRouter(
         <Route path=":id" element={<RepoDetails />} />
       </Route>
       <Route path="/errorboundary" element={<ErrorBoundary />} />
-      <Route path="/error404" element={<Error404Page />} />
     </>
   )
 );

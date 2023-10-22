@@ -198,4 +198,9 @@ img {
     padding: 10px 0;
     word-break: break-all;
   }
+  #errors {
+    
+    justify-content: space-between;
+    
+  }
 }

@@ -1,16 +1,16 @@
-
-import { Link, useRouteError } from "react-router-dom"
+import { Link, useRouteError } from "react-router-dom";
 
 function Error404Page() {
-
-    const error = useRouteError()
-    console.error(error)
-
-    return (
-        <div className="error-404-page">
-            <h1>ERROR 404</h1>
-            <p>Go to <Link to="/"><b>Home Page</b></Link></p>
-        </div>
-    )
+  return (
+    <div className="error-404-page">
+      <h1>ERROR 404</h1>
+      <p>
+        Go to{" "}
+        <Link to="/">
+          <b>Home Page</b>
+        </Link>
+      </p>
+    </div>
+  );
 }
-export default Error404Page
+export default Error404Page;
